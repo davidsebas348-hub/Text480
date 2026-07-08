@@ -62,7 +62,7 @@ local Secuencia = {
 },
         {
 
-		Color = Color3.fromRGB(),
+		Color = Color3.fromRGB(255, 234, 0),
 
 		Puerta = workspace.GameplayParts.Doors.Normal.Paintable.Yellow,
 		ItemsDespues = {
@@ -74,7 +74,7 @@ local Secuencia = {
 },
       {
 
-		Color = Color3.fromRGB(),
+		Color = Color3.fromRGB(17, 255, 0),
 
 		Puerta = workspace.GameplayParts.Doors.Normal.Paintable.Green,
 		ItemsDespues = {
@@ -86,12 +86,82 @@ local Secuencia = {
 },
        {
 
-		Color = Color3.fromRGB(),
+		Color = Color3.fromRGB(10, 255, 153),
 
 		Puerta = workspace.GameplayParts.Doors.Normal.Paintable.Teal,
 		ItemsDespues = {
             {
-                Objeto = workspace.GameplayAssets.Items.Normal.PaintBucket.Triangle,
+                Objeto = workspace.GameplayAssets.Items.Normal.Tool.Puzzle,
+				PromptParent = "Root"
+		}
+	}
+},
+       {
+
+		Color = nil,
+
+		Puerta = workspace.GameplayParts.Doors.Normal.Unlockable.Puzzle,
+		ItemsDespues = {
+            {
+                Objeto = workspace.GameplayAssets.Items.Normal.PaintBucket.Blue,
+				PromptParent = "Root"
+		}
+	}
+},
+         {
+
+		Color = Color3.fromRGB(0, 26, 255),
+
+		Puerta = workspace.GameplayParts.Doors.Normal.Paintable.Blue,
+		ItemsDespues = {
+            {
+                Objeto = workspace.GameplayAssets.Items.Normal.Tool.Saw,
+				PromptParent = "Root"
+		}
+	}
+},
+          {
+
+		Color = nil,
+
+		Puerta = workspace.GameplayParts.Doors.Normal.Unlockable.Saw,
+		ItemsDespues = {
+            {
+                Objeto = workspace.GameplayAssets.Items.Normal.PaintBucket.Purple,
+				PromptParent = "Root"
+		}
+	}
+},
+           {
+
+		Color = nil,
+
+		Puerta = workspace.GameplayParts.Doors.Normal.Paintable.Purple,
+		ItemsDespues = {
+            {
+                Objeto = workspace.GameplayAssets.Items.Normal.Tool.Plank,
+				PromptParent = "Root"
+		}
+	}
+},
+        {
+         Color = nil,
+
+		Puerta = workspace.GameplayParts.Doors.Normal.Buildable.Plank,
+		ItemsDespues = {
+            {
+                Objeto = workspace.GameplayAssets.Items.Normal.Tool.Hammer,
+				PromptParent = "Root"
+		}
+	}
+},
+         {
+         Color = nil,
+
+		Puerta = workspace.GameplayParts.Doors.Normal.Unlockable.Hammer,
+		ItemsDespues = {
+            {
+                Objeto = workspace.GameplayAssets.Items.Normal.Tool.Hammer,
 				PromptParent = "Root"
 		}
 	}
@@ -293,15 +363,16 @@ while task.wait(0.1) do
 
 			repeat
 
-				task.wait(0.1)
+	task.wait(0.1)
 
-				highlight = obtenerHighlight()
+	highlight = obtenerHighlight()
 
-
-			until highlight
+until highlight
 and (
-	paso.Color == nil
-	or not mismoColor(highlight.FillColor,paso.Color)
+	paso.Color ~= nil 
+	and not mismoColor(highlight.FillColor,paso.Color)
+	or paso.Color == nil
+	and not paso.Puerta:IsDescendantOf(workspace)
 )
 
 
