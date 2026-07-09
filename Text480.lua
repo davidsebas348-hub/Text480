@@ -474,11 +474,11 @@ task.spawn(function()
 		local plank = workspace.GameplayParts.Doors.Normal.Buildable:FindFirstChild("Plank")
 
 		if plank then
-			local buildable = plank:FindFirstChild("Buildable")
+			local buildable = plank:FindFirstChild("Buildable", true)
 
 			if buildable
-				and buildable:IsA("BasePart")
-				and buildable.Transparency == 0 then
+				and buildable:IsA("MeshPart")
+				and buildable.Transparency <= 0 then
 
 				buildable:Destroy()
 			end
