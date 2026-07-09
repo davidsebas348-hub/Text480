@@ -235,8 +235,9 @@ local Secuencia = {
 		PromptParent = "Root"
 	}
 }
+		
+}	
 	
-
 }
 
 
