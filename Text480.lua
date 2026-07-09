@@ -305,7 +305,7 @@ local function hacerClicks(puerta)
 	if centro then
 
 
-		root.CFrame = centro.CFrame * CFrame.new(0,0,6)
+		root.CFrame = centro.CFrame * CFrame.new(0,0,4)
 
 
 		task.wait(0.2)
@@ -454,4 +454,10 @@ and (
 
 	end
 
+end
+
+for _, objeto in ipairs(workspace.GameplayParts.Doors:GetDescendants()) do
+	if objeto:IsA("BasePart") then
+		objeto.CanCollide = false
+	end
 end
