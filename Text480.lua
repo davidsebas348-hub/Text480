@@ -467,3 +467,21 @@ and (
 	end
 
 end
+-- necesario para el chapter 1
+
+task.spawn(function()
+	while task.wait(0.1) do
+		local plank = workspace.GameplayParts.Doors.Normal.Buildable:FindFirstChild("Plank")
+
+		if plank then
+			local buildable = plank:FindFirstChild("Buildable")
+
+			if buildable
+				and buildable:IsA("BasePart")
+				and buildable.Transparency == 0 then
+
+				buildable:Destroy()
+			end
+		end
+	end
+end)
