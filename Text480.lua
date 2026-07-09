@@ -321,20 +321,26 @@ local function hacerClicks(puerta)
 
 			while puerta and puerta:IsDescendantOf(workspace) do
 
+	if lejos(centro,20) then
+		root.CFrame = centro.CFrame * CFrame.new(0,0,4)
+		task.wait(0.1)
+	end
 
-				fireclickdetector(click)
+	fireclickdetector(click)
 
+	task.wait(0.05)
 
-				task.wait(0.05)
-
-
-			end
+end
 
 
 		end
 
 	end
 
+end
+
+local function lejos(parte, distancia)
+	return (root.Position - parte.Position).Magnitude > distancia
 end
 
 
@@ -371,8 +377,16 @@ local function recogerItem(data)
 
 
 			while objeto and objeto:IsDescendantOf(workspace) do
+
+	if lejos(rootItem,20) then
+		root.CFrame = rootItem.CFrame * CFrame.new(0,3,0)
+		task.wait(0.1)
+	end
+
 	fireproximityprompt(prompt)
+
 	task.wait(0.1)
+
 end
 
 
@@ -454,10 +468,4 @@ and (
 
 	end
 
-end
-
-for _, objeto in ipairs(workspace.GameplayParts.Doors:GetDescendants()) do
-	if objeto:IsA("BasePart") then
-		objeto.CanCollide = false
-	end
 end
