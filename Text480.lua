@@ -134,7 +134,7 @@ local Secuencia = {
 },
            {
 
-		Color = nil,
+		Color = Color3.fromRGB(128, 0, 255),
 
 		Puerta = workspace.GameplayParts.Doors.Normal.Paintable.Purple,
 		ItemsDespues = {
@@ -161,12 +161,34 @@ local Secuencia = {
 		Puerta = workspace.GameplayParts.Doors.Normal.Unlockable.Hammer,
 		ItemsDespues = {
             {
-                Objeto = workspace.GameplayAssets.Items.Normal.Tool.Hammer,
+                Objeto = workspace.GameplayAssets.Items.Normal.PaintBucket.Pink,
 				PromptParent = "Root"
 		}
 	}
 },
+        {
+         Color = Color3.fromRGB(238, 0, 255),
 
+		Puerta = workspace.GameplayParts.Doors.Normal.Paintable.Pink,
+		ItemsDespues = {
+            {
+                Objeto = workspace.GameplayAssets.Items.Normal.Tool.Key,
+				PromptParent = "Root"
+		}
+	}
+},
+	    {
+         Color = nil,
+
+		Puerta = workspace.GameplayParts.Doors.Normal.Unlockable.Key,
+		ItemsDespues = {
+            {
+                Objeto = ,
+				PromptParent = "Root"
+		}
+	}
+},
+	
 
 }
 
