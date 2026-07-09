@@ -295,7 +295,9 @@ local function obtenerCentro(modelo)
 
 end
 
-
+local function lejos(parte, distancia)
+	return (root.Position - parte.Position).Magnitude > distancia
+end
 
 local function hacerClicks(puerta)
 
@@ -337,10 +339,6 @@ end
 
 	end
 
-end
-
-local function lejos(parte, distancia)
-	return (root.Position - parte.Position).Magnitude > distancia
 end
 
 
