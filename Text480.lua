@@ -370,10 +370,10 @@ local function recogerItem(data)
 			task.wait(0.3)
 
 
-			fireproximityprompt(prompt)
-
-
-			task.wait(1)
+			while objeto and objeto:IsDescendantOf(workspace) do
+	fireproximityprompt(prompt)
+	task.wait(0.1)
+end
 
 
 		end
