@@ -305,7 +305,7 @@ local function hacerClicks(puerta)
 	if centro then
 
 
-		root.CFrame = centro.CFrame * CFrame.new(0,0,4)
+		root.CFrame = centro.CFrame * CFrame.new(0,0,6)
 
 
 		task.wait(0.2)
