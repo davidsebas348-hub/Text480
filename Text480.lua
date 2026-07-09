@@ -182,12 +182,59 @@ local Secuencia = {
 
 		Puerta = workspace.GameplayParts.Doors.Normal.Unlockable.Key,
 		ItemsDespues = {
-            {
-                Objeto = ,
-				PromptParent = "Root"
-		}
+	{
+		Objeto = workspace.GameplayAssets.Items.Collectable.Collectable:FindFirstChild("1"),
+		PromptParent = "Root"
+	},
+	{
+		Objeto = workspace.GameplayAssets.Items.Collectable.Collectable:FindFirstChild("2"),
+		PromptParent = "Root"
+	},
+	{
+		Objeto = workspace.GameplayAssets.Items.Collectable.Collectable:FindFirstChild("3"),
+		PromptParent = "Root"
+	},
+	{
+		Objeto = workspace.GameplayAssets.Items.Collectable.Collectable:FindFirstChild("4"),
+		PromptParent = "Root"
+	},
+	{
+		Objeto = workspace.GameplayAssets.Items.Collectable.Collectable:FindFirstChild("5"),
+		PromptParent = "Root"
+	},
+	{
+		Objeto = workspace.GameplayAssets.Items.Collectable.Collectable:FindFirstChild("6"),
+		PromptParent = "Root"
+	},
+	{
+		Objeto = workspace.GameplayAssets.Items.Collectable.Collectable:FindFirstChild("7"),
+		PromptParent = "Root"
+	},
+	{
+		Objeto = workspace.GameplayAssets.Items.Collectable.Collectable:FindFirstChild("8"),
+		PromptParent = "Root"
+	},
+	{
+		Objeto = workspace.GameplayAssets.Items.Collectable.Collectable:FindFirstChild("9"),
+		PromptParent = "Root"
+	},
+	{
+		Objeto = workspace.GameplayAssets.Items.Collectable.Collectable:FindFirstChild("10"),
+		PromptParent = "Root"
+	},
+	{
+		Objeto = workspace.GameplayAssets.Items.Collectable.Collectable:FindFirstChild("11"),
+		PromptParent = "Root"
+	},
+	{
+		Objeto = workspace.GameplayAssets.Items.Collectable.Collectable:FindFirstChild("12"),
+		PromptParent = "Root"
+	},
+	{
+		Objeto = workspace.GameplayAssets.Items.Collectable.Collectable:FindFirstChild("13"),
+		PromptParent = "Root"
 	}
-},
+}
 	
 
 }
