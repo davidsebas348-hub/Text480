@@ -470,17 +470,17 @@ end
 -- necesario para el chapter 1
 
 task.spawn(function()
+	local iniciado = false
+
 	while task.wait(0.1) do
-		local plank = workspace.GameplayParts.Doors.Normal.Buildable:FindFirstChild("Plank")
+		if pasoActual == 11 and not iniciado then
+			iniciado = true
 
-		if plank then
-			local buildable = plank:FindFirstChild("Buildable", true)
+			task.wait(10)
 
-			if buildable
-				and buildable:IsA("MeshPart")
-				and buildable.Transparency <= 0 then
-
-				buildable:Destroy()
+			local plank = workspace.GameplayParts.Doors.Normal.Buildable:FindFirstChild("Plank")
+			if plank and plank:IsDescendantOf(workspace) then
+				plank:Destroy()
 			end
 		end
 	end
